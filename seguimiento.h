@@ -1,4 +1,4 @@
-//parte de mauro
+// parte de mauro
 
 #pragma once
 #include <iostream>
@@ -14,7 +14,6 @@ private:
     int mantenimientoRealizado;
     int datosActualizados;
 
-  
     int leerEntero(string mensaje) {
         int valor;
         while (true) {
@@ -24,8 +23,8 @@ private:
             }
             else {
                 cout << "Error: Entrada no valida. Por favor ingrese unicamente el numero.\n";
-                cin.clear(); 
-                cin.ignore(numeric_limits<streamsize>::max(), '\n'); 
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
             }
         }
     }
@@ -35,20 +34,10 @@ public:
         cout << "========================================" << endl;
         cout << "=== SISTEMA DE SEGUIMIENTO VEHICULAR ===" << endl;
         cout << "========================================" << endl;
-
-       
-        do {
-            cout << "\n[ Registro del vehiculo ]" << endl;
-            informacionCorrecta = leerEntero("La informacion es correcta? (1=Si, 0=No): ");
-
-            if (informacionCorrecta == 0) {
-                cout << "=> Error: Por favor, vuelva a verificar e ingresar la informacion." << endl;
-            }
-        } while (informacionCorrecta == 0);
-
+        cout << "\n[ Registro del vehiculo ]" << endl;
         cout << "=> Informacion guardada correctamente." << endl;
 
-        
+       
         cout << "\n[ Seleccione el tipo de mantenimiento ]" << endl;
         cout << "1. Cambio de aceite\n2. Revision\n3. Reparacion\n4. Frenos\n5. Balanceo" << endl;
         opcion = leerEntero("Opcion: ");
@@ -62,7 +51,6 @@ public:
             cout << "=> Mantenimiento pendiente." << endl;
         }
 
-      
         cout << "\n[ Estado del vehiculo ]" << endl;
         cout << "1. Disponible\n2. En taller\n3. En circulacion\n4. Fuera de servicio" << endl;
         estado = leerEntero("Opcion: ");
@@ -90,10 +78,10 @@ public:
         cout << "Fin del modulo de seguimiento. Preparando siguiente modulo..." << endl;
         cout << "========================================" << endl;
 
-        
+      
         cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-        cout << "\nPresione Enter para continuar al modulo de Servicios y Precios...";
+        cout << "\nPresione Enter para continuar al menu principal...";
         cin.get();
     }
 };
