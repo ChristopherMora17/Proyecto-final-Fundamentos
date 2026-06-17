@@ -139,10 +139,12 @@ public:
 
             if (repetir != 1 && repetir != 2) {
                 cout << "Opcion invalida. Saliendo..." << endl;
+                pausa();
                 break;
             }
             cout << endl;
         }
         cout << "Saliendo del modulo de facturacion..." << endl;
+        pausa();
     }
 };
