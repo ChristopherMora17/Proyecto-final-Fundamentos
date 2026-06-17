@@ -23,7 +23,7 @@ private:
     int repetir = 1;
 
     void calcularTotal() {
-        totalPagar = (servicioPrecio * (1 - clienteDescuento / 100.0)) + servicioManoDeObra;
+       totalPagar = ((servicioPrecio + servicioManoDeObra ) * (1 - clienteDescuento / 100.0));
     }
 
     void mostrarFactura() {
@@ -88,13 +88,13 @@ public:
         cout << "====================================\n";
 
         if (listaclientes.empty()) {
-            cout << "No hay clientes registrados en el sistema principal todavía.\n";
+            cout << "No hay clientes registrados en el sistema principal todavÃ­a.\n";
             pausa();
             return;
         }
 
         int buscarnum;
-        cout << "Ingrese el número de cliente que va a realizar la factura: ";
+        cout << "Ingrese el nÃºmero de cliente que va a realizar la factura: ";
         cin >> buscarnum;
 
         bool encontrado = false;
@@ -109,7 +109,7 @@ public:
         }
 
         if (!encontrado) {
-            cout << "Error: No se encontró ningún cliente con el número " << buscarnum << endl;
+            cout << "Error: No se encontrÃ³ ningÃºn cliente con el nÃºmero " << buscarnum << endl;
             pausa();
         }
         borrar();
